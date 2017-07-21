@@ -54,3 +54,11 @@ body {
     padding-top: 0;
     border-radius: 4px;
 }
+:required
+{
+    border:1px dotted red;
+}
+img
+{
+  margin-left: 50px;
+}
