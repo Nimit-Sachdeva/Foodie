@@ -56,9 +56,14 @@ body {
 }
 :required
 {
-    border:1px dotted red;
+    border:1px dotted green;
 }
 img
 {
   margin-left: 50px;
 }
+<style>
+    .ng-invalid {
+        border: 1px solid red;
+    }
+</style>
