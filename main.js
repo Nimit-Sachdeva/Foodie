@@ -8,9 +8,29 @@
 //           $('.welcome-message').text(message);
 //   });
 // });
-var foodieApp = angular.module('foodieApp',[]);   //We are storing the value and from the ng-app in html file
+var foodieApp = angular.module('foodieApp',['ngRoute']);   //We are storing the value and from the ng-app in html file
 console.log(foodieApp);
+var foodieApp = angular.module('foodieApp',['ngRoute']);
+foodieApp.config(function ($routeProvider) {
+	$routeProvider
+	.when('/',{
+		templateUrl: 'pages/login.html',
+		controller: 'loginController'
+	})
+	.when('/home',{
+		templateUrl: 'pages/main.html',
+		controller: 'mainController'
+	});
+});
+
+foodieApp.controller('loginController',function($scope) {
+	$scope.goToHome = function() {
+		console.log('Do Something')
+		$location.url('home')
+	}
+});
 foodieApp.controller('mainController',function($scope) {
+//below is the array having objects  and has the details of all the restaurants and scope variable which is defined for controller
 	$scope.restaurants = [{
 	name: 'Farzi Cafe',
 	address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
