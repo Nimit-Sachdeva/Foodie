@@ -94,7 +94,7 @@ vote: '4.0',
 cuisines: 'North Indian, Continental, Asian',
 cost: '1200',
 hours: '11 AM to 4 PM, 6:30 PM to 11 PM',
-image: 'imgs/biryani.png',
+image: 'http://img02.burrpimg.com/40346612a34f8347f34cc266a1ff76db.jpg',
 bestDish: {
 	name: 'Biryani',
 	image: 'http://img02.burrpimg.com/40346612a34f8347f34cc266a1ff76db.jpg'
@@ -108,7 +108,7 @@ vote: '4.5',
 cuisines: 'North Indian, Chinese',
 cost: '1300',
 hours: '12 Noon to 3 PM, 6:30 PM to 11 PM(Mon-Sun)',
-image: 'imgs/sea-food.png',
+image: 'http://www.pioneerchef.com/wp-content/uploads/2015/01/SeaFood..jpg',
 bestDish: {
 	name: 'Sea Food',
 	image: 'http://www.pioneerchef.com/wp-content/uploads/2015/01/SeaFood..jpg'
@@ -122,7 +122,7 @@ vote: '3.8',
 cuisines: 'North Indian',
 cost: '2200',
 hours: ' 11 AM to 11 PM (Mon-Sun)',
-image: 'imgs/soya-champ.png',
+image: 'https://i0.wp.com/files.hungryforever.com/wp-content/uploads/2017/05/09195434/feature-image-soya-chaap.jpg?w=1269&strip=all&quality=80',
 // bestDish: {
 // 	image: 'https://i0.wp.com/files.hungryforever.com/wp-content/uploads/2017/05/09195434/feature-image-soya-chaap.jpg?w=1269&strip=all&quality=80'
 // 	name: 'Soya Champ',
@@ -136,7 +136,7 @@ vote: '4.2',
 cuisines: 'North Indian, Mughlai, South Indian',
 cost: '500',
 hours: '12 Noon to 1 AM (Mon-Sun)',
-image: 'imgs/butter-chicken-golgappe.png',
+image: 'https://b.zmtcdn.com/data/reviews_photos/e5d/fce3ed15158bf460ecfd8a1a9c268e5d_1499275811.jpg',
 bestDish: {
 	name: 'Butter Chicken Gol Gappe',
 	image: 'https://b.zmtcdn.com/data/reviews_photos/e5d/fce3ed15158bf460ecfd8a1a9c268e5d_1499275811.jpg'
