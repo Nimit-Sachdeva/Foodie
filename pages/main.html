@@ -41,7 +41,7 @@
           <!-- ng-repeat is like a loop in javascript -->
           <div class="rest-wrapper">
               <div class="image">
-                  <img src="{{restaurant.image}}" height="100" width="100">
+                  <img ng-src="{{restaurant.image}}" height="100" width="100">
                   <!-- above code line will show the image for each restaurant -->
               </div>
               <div class="rest-info">
@@ -50,7 +50,7 @@
                      <!-- above code line will show the category for each restaurant food like chinese , indian-->
                   </div>
                   <div class="rest-name">
-                  <strong>{{restaurant.name}}</strong>
+                      <a ng-href="#!/restaurant/{{restaurant.id}}"><strong>{{restaurant.name}}</strong></a>
                   </div>
                   <div>
                      <strong> {{restaurant.location}}</strong>
