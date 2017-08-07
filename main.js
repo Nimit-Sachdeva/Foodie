@@ -66,10 +66,10 @@ vote: '4.0',
 cuisines: 'North Indian',
 cost: '1000',
 hours: '12 Noon to 12 AM(Mon-Sun)',
-image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg',
+image: 'https://github.com/Nimit-Sachdeva/Foodie/blob/master/imgs/paneer-tikka.png',
 bestDish: {
 	name: 'Paneer Tikka,',
-	image: '/imgs/paneer-tikka.png'
+	image: 'https://github.com/Nimit-Sachdeva/Foodie/blob/master/imgs/paneer-tikka.png'
 },
 },{
 name: 'Upstairs club',
