@@ -155,5 +155,6 @@ img
 .done
 {
   text-decoration: line-through;
-  right:1rem;
+ /*position: absolute;*/
+ /*float:right;*/
 }
