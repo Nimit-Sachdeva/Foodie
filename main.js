@@ -40,7 +40,7 @@ foodieApp.controller('groceryController',function($scope) {
 });
 
 
-foodieApp.controller('restaurantController',function($scope,$routeParams,$http) {
+foodieApp.controller('restaurantController',function($scope,$routeParams,$http,$filter) {
 	$scope.restaurantId = $routeParams.id;
 //array of objects having restaurants details
 	var restaurants = [{
@@ -82,7 +82,7 @@ cost: '1600 ',
 hours: '12 Noon to 12 AM (Mon-Sun)',
 image: 'http://i.huffpost.com/gadgets/slideshows/433830/slide_433830_5660694_free.jpg',
 bestDish: {
-	name: 'Corn Pizza',
+	name: 'Bacon Wrap',
 	image: 'http://i.huffpost.com/gadgets/slideshows/433830/slide_433830_5660694_free.jpg'
 },
 },{
@@ -145,8 +145,7 @@ bestDish: {
 	$scope.restaurant = restaurants[$routeParams.id - 1];
 //the ingredients are going to be stored into this array
 	$scope.ingredients = [];
-	//groceries for getGrocery are storedin this
-	$scope.groceries = [];
+
 	$scope.getIngredients = function(url) {
 			var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'
 				$http({
@@ -158,14 +157,17 @@ bestDish: {
 					},
 					'data': data
 				}).then(function (response) {
-	var ingredients = response.data.outputs[0].data.concepts;
-	for (var i =0;i < ingredients.length;i++) {
-	$scope.ingredients.push(ingredients[i].name);
-	}
+		var ingredients = response.data.outputs[0].data.concepts;
+		for (var i =0;i < ingredients.length;i++) {
+		$scope.ingredients.push(ingredients[i].name);
+		}
 			        }, function (xhr) {
 			        	console.log(xhr);
 			        });
 						}
+						//groceries for getGrocery are storedin this
+						// $scope.groceries = [{grocery:'',done:true}];
+						$scope.groceries = [];
 						$scope.getGrocery = function(url) {
 								var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'
 									$http({
@@ -181,16 +183,41 @@ bestDish: {
 											var groceries = response.data.outputs[0].data.concepts;
 											for (var i =0;i < groceries.length;i++) {
 											$scope.groceries.push(groceries[i].name);
+
 											}
+
 								     }, function (xhr) {
 							     	console.log(xhr);
 						        });
-										}
+//$scope.groceries = $filter('filter')($scope.albums, { Selected: true }, true);
+$scope.showDone = function (event) {
 
-										$scope.changeClass = function(){
-										    angular.element(document.querySelector("input")).addClass("done");
-												
-										}
+var myid=event.target.id;
+    // alert(myid);
+
+	angular.element(document.getElementById(myid)).toggleClass("done");
+	// $(label).toggleClass('done');
+};
+					}
+
+					// 		//								var x = document.getElementsByClassName("example");
+					// var i;
+					// for (i = 0; i < $scope.groceries.length; i++) {
+					//   //  x[i].style.backgroundColor = "red";
+					// }
+						// $scope.checkboxSel = function()
+						// {
+						// // 						if($('.check').checked)
+						// // 						{
+						// // 							$('.check').addClass('done');
+						// // 						}
+						// // 						else{
+						// // 							$('.check').removeClass('done')
+						// // 						}
+						// var ang= document.querySelector('input[type=checkbox]')
+						// .addClass('done'), {checked: true}
+						// //
+						// 	}
 
 				})
 
@@ -246,7 +273,7 @@ cost: '1600 ',
 hours: '12 Noon to 12 AM (Mon-Sun)',
 image: 'http://i.huffpost.com/gadgets/slideshows/433830/slide_433830_5660694_free.jpg',
 bestDish: {
-	name: 'Corn Pizza',
+	name: 'Bacon wrap',
 	image: 'http://i.huffpost.com/gadgets/slideshows/433830/slide_433830_5660694_free.jpg'
 },
 },{

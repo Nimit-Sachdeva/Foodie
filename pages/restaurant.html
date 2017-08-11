@@ -49,16 +49,19 @@
 
     </div>
     <!-- <div ngController="groceryController"> -->
-    <div ng-if='grocery' ng-repeat='grocery in groceries' >
-
+    <div ng-if='grocery'  ng-repeat='grocery in groceries'>
+      <div  >
       <!-- A checkbox displaying the progress -->
-      <input  ng-click="done=true" type='checkbox' ng-model='data.done'  />
       <!-- An information of a task -->
-      <span ng-class="{done}">
-        <!-- {{ingredient.grocery}} -->
+      <label id="{{grocery}}"  ng-click="showDone($event)" >
+        <input  type='checkbox' ng-model='data.done'   />
         {{grocery}}
-      </span>
-      <!-- </div> -->
+
+      </label>
+      <!-- for="{{grocery}}" > -->
+        <!-- {{ingredient.grocery}} -->
+      <!-- </span> -->
+      </div>
     </div>
     </div>
 </div>
